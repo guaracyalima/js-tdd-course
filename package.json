@@ -1,0 +1,24 @@
+{
+  "name": "tdd_js",
+  "version": "1.0.0",
+  "description": "lib js with tdd course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guaracyalima/js-tdd-course.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Guaracy A Lima <guaracyaraujolima@gmail.com> (http://guabirabadev.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guaracyalima/js-tdd-course/issues"
+  },
+  "homepage": "https://github.com/guaracyalima/js-tdd-course#readme"
+}
