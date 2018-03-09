@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>11 -  spread operator</title>
+</head>
+<body>
+    
+    <script>
+        //spread operator (...) serve pra pegar objetos que são iteraveis(array, string, objetos)
+        // e desmebrar em pequenas partes
+        let front = ['react', 'vue', 'angular']
+        let back = ['python', 'php', 'nodejs']
+
+        console.log([...'guabirabadev']);
+        console.log(...front);
+        
+        //junta os dois arrays
+        //pra adicionar um novo elento nel, so passar a astring 'RxJS'
+        let fullstack = [...front, 'RxJS', ...back]
+        console.log(fullstack);
+        
+    </script>
+</body>
+</html>
