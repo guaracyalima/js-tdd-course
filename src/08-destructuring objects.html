@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>0-- destructuring objects</title>
+</head>
+<body>
+    <script>
+        const data = {
+            name: 'guabirabaDev',
+            surname: 'developer',
+            age: 36,
+            blog: 'bsbsdev.net',
+            social: {
+                twitter: '@guabirabadev',
+                facebook: '@guabirabadev_'
+            }
+        };
+
+
+        //destructuring 'retira dados' de um determinado objeto
+        const { name, surname } = data
+        console.log(name);
+        console.log(surname);
+        
+        
+        // para pegar de dentro d eobjetos identados, so usar o metdo tradicionar que é passar
+        // o nome do objeto . pronpriedade
+
+        const { facebook, twitter } = data.social
+
+        console.log(facebook);
+        console.log(twitter);
+        
+        //poso usar rename na constante
+
+        const { facebook: fb } = data.social
+        console.log(fb);
+
+        //posso pegar propriedades que ainda nem existem no objeto
+        const { city } = data
+
+        console.log(city);
+
+        //posso passar tambem um valor default constante
+        //caso n exista ele asume essa padrao
+
+        const { citinga =  'bsb' } = data
+        console.log(citinga);
+        
+        
+        
+    </script>
+</body>
+</html>
