@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promises multiplas</title>
+</head>
+<body>
+    <script>
+        const currency = new Promise( (resolve, reject) => {
+            setTimeout( () => {
+                resolve({currency: 'euro', value: 4.20 })
+            }, 2000)
+        })
+
+        const countries = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(['ireland', 'england', 'scotland'])
+            }, 600)
+        })
+
+        //metodo all espera a promisse de maior tempo ser reolvida
+        Promise.all([currency, countries])
+                .then(responses => console.log('all', responses))
+
+        //o race pega so a primeira resposta, o resto n importa
+        Promise.race([currency, countries])
+                .then(responses => console.log('race', responses))
+    </script>
+</body>
+</html>

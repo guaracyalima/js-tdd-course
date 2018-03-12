@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Generator ajax</title>
+</head>
+<body>
+    <script>
+        function ajax(url){
+           fetch(url) 
+                .then( data => data.json())
+                //.then( data => console.log(data))
+                .then( data => dados.next(data))
+        }
+
+        //função normal
+        // function ajaxGen(){
+        //     console.log('Buscando posts')
+        //     ajax('https://jsonplaceholder.typicode.com/posts')
+
+
+        //     console.log('Buscando unico posts')
+        //     ajax('https://jsonplaceholder.typicode.com/posts/1')
+        // }
+        // ajaxGen()
+
+        //usando generators
+        function* gen(){
+            console.log('Buscando posts com generators');
+           const posts = yield ajax('https://jsonplaceholder.typicode.com/posts');
+           console.log(posts);
+
+            console.log('Buscando unico posts com generators');
+            const p1 = yield ajax('https://jsonplaceholder.typicode.com/posts/1');
+            console.log(p1);
+        }
+
+        const dados = gen();
+        dados.next();
+    </script>
+</body>
+</html>

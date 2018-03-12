@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Generators</title>
+</head>
+<body>
+    <script>
+        //para definir um generator se us um asterisco apos a palavra function (function*)
+        function* genNames(){
+            yield 'guabiraba'
+            yield 'eric cartiman'
+            yield 'braian griffin'
+        }
+
+        //o yeld é como se fosse o return
+
+        const names = genNames();
+
+        //para acessar as propriedades do generator
+        //é realizado o mesmo processo de acesso a um simbol
+        //usando o .next()
+        //dai:
+        console.log(names.next());
+        //pra chamar so o valor:
+        console.log(names.next().value);
+    </script>
+</body>
+</html>
