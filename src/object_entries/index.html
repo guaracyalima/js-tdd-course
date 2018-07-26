@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Entries</title>
+</head>
+<body>
+<script>
+	const animals = {
+		camel: 2,
+		lhama: 1, 
+		cabiludim: 333
+	}
+
+	/*
+		Object.entries(animals) SEPARA OS ITEMS EM ARRAYS
+	*/
+
+	console.log(Object.entries(animals))
+
+	const animalsMap = new Map(Object.entries(animals))
+
+	//posso fazer busca nesse array
+
+	console.log(animalsMap.has('cabiludim'))
+
+	//posso pegar o valor do item
+	console.log(animalsMap.get('cabiludim'))
+</script>
+</body>
+</html>
