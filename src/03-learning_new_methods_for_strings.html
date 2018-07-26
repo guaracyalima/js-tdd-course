@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>03 - Novos metodos para strings</title>
+</head>
+<body>
+    <script>
+        let text = 'Lorem ipsun dolor sit amet';
+        
+        //faz a verificação se a string começa com lorem
+        console.log(text.startsWith('Lorem')); 
+
+        //verifica se a string inicia com o parametro entre parenteses na posicao indicada
+        console.log(text.startsWith('rem', 2))
+
+        //verifica se a string termina com o conteudo do primeiro parametro   
+        console.log(text.startsWith('ame'))   
+
+        //passando o parametro de contagem, ele conta da direita pra esquerda fazendo a verificação
+        console.log(text.includes('ipsun'))   
+        
+        //o includes verifica se o parametro informado existe dentro da string
+        console.log(text.startsWith('ame', 25))   
+
+
+
+
+        //o repéat faz a repetição da string a quantidade de veses informada no parametro da repeat
+        //vale lembrar que repeat é um metodo, e nao uma função
+        console.log('lol'.repeat(10))        
+    </script>
+</body>
+</html>

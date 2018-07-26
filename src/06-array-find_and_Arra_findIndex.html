@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>06 - Array.find and Array.findIndex()</title>
+</head>
+<body>
+    
+    <script>
+        //array find e findIndex servem para fazer buscas dentro de arrays
+        //Array.find busca um dado dentro do array
+        //Array.findIndex busca um indice dentro do array
+        
+        const data = [
+            {
+                name: 'guabirabaDev',
+                age: '26',
+                city: 'bsb'
+            },
+            {
+                name: 'guabirabaTalco',
+                age: '666',
+                city: 'bsb'
+            },
+        ]
+
+        const sampleArray = [4, -5, 6]
+
+        //find busc ao primeiro valor
+        //filter retorna true ou  false
+
+        //find ele exige uma equação de comparacao passada para funcao ( de  preferencia que seja
+        //uma arrow function ja que ele exige retunr)
+
+        const underZero = sampleArray.find(x => x < 0 )
+
+        const underZeroIndex = sampleArray.findIndex(x => x < 0 )
+
+        //o find retorna o elemento elencontrado
+        console.log(underZero);
+
+        //o find inex retorna a posição do array no qual o elemtno foi encontrado
+        console.log(underZeroIndex);
+        
+        //fazendo a busca num array
+        const dev = data.find( person => (person.name === 'guabirabaDev'))
+
+        //usando findIndex
+        const devIndex = data.findIndex( person => (person.name === 'guabirabaDev'))
+        console.log(dev);
+        console.log(devIndex);
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>14 - promisses intro</title>
+</head>
+<body>
+    <script>
+        //promisses são objetos com ações que ainda não foram finalziadas 
+        //mas que pode ser concluida no futuro de alguma forma
+
+        //é importante para trabalhar com dados assincronos
+        //sua impontancia é para evitar callback hell
+
+        var defer = new Promise( (resolve, reject) => {
+            //resolve é o metodo que vai resolver a promisse
+            //reject é o metodo que jeita a ção
+
+            setTimeout(() => {
+                if(true){
+                resolve('hello!')
+            }else{
+                reject('Não funfou')
+            }
+            }, 2000)
+        })
+
+        defer
+            .then( res =>{
+                console.log(res)
+                return 'foo';
+            })
+            .then(data => console.log(data))
+            .catch( error => console.log(error))
+    </script>
+</body>
+</html>
